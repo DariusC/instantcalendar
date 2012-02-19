@@ -8,7 +8,7 @@ Displays a simple HTML calendar. Appearance and behaviour of the calendar is ful
 Usage
 =====
 
-1. ruby script/plugin install git://github.com/unni123/instantcalendar.git
+1. ruby script/plugin install git://github.com/unnitallman/instantcalendar.git
 
 2. Rails >= 2.0 
    rake instant_calendar:setup
