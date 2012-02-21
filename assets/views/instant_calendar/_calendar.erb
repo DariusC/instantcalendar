@@ -29,7 +29,8 @@
 								<%padding = (first_day.wday+6)%7%>
 								<%count = padding + 1 %>
 								<%if padding != 0%>
-									<td colspan="<%= padding %>" class="pad">&nbsp;</td>
+									<td colspan="<%= padding %>" class="pad">&nbsp; 
+									</td>
 								<%end%>
               	<%1.upto(n) do |i|%>
 									<%if highlight_today and today?(i)%>
@@ -37,7 +38,10 @@
 										<%if url%>
 											<td id="date_<%=i%>" class="today"><%=url%></td>
 										<%else%>
-											<td id="date_<%=i%>" class="today"><%=i%></td>
+											<td id="date_<%=i%>" class="today"><%=i%>
+												<input type="checkbox" value="today" checked>
+												</input>
+											</td>
 										<%end%>
 								  <%else%>
 										<%url = dates[i] %>
@@ -51,7 +55,10 @@
 											<%if highlight_dates.include?(i)%>
 												<td class="highlight" id="date_<%=i%>" ><%=i%></td>
 											<%else%>
-												<td id="date_<%=i%>" ><%=i%></td>
+												<td id="date_<%=i%>" ><%=i%>
+													<input type="checkbox" value="another date">
+													</input>
+												</td>
 											<%end%>
 										<%end%>
 									<%end%>
